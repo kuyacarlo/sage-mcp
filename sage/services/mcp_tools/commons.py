@@ -66,3 +66,15 @@ async def programs() -> list:
     async with pool.acquire() as connection:
         rows = await connection.fetch(query)
     return [{"code": record["program_code"], "name": record["program_name"]} for record in rows]
+
+
+async def topics() -> list:
+    """
+    Implements the topics MCP tool.
+    Retrieves all topics from the database.
+    """
+    pool = await get_db_pool()
+    query = "SELECT DISTINCT topic_name FROM curriculum_topics ORDER BY topic_name"
+    async with pool.acquire() as connection:
+        rows = await connection.fetch(query)
+    return [record["topic_name"] for record in rows]

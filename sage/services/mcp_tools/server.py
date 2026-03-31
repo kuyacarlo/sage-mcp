@@ -26,6 +26,12 @@ async def list_programs() -> list:
     return await commons.programs()
 
 
+@mcp.resource("commons://topics")
+async def list_topics() -> list:
+    """List all available topics in Ghost Commons"""
+    return await commons.topics()
+
+
 @mcp.tool(annotations={"readOnlyHint": True, "idempotentHint": True})
 async def get_commons_tree(program_code: str, year_level: int, semester: int) -> dict:
     """Fetch curriculum from Ghost Commons for a program"""
