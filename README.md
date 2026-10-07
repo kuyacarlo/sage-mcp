@@ -139,3 +139,7 @@ SAGE is currently in **v1.0 (Beta)**. Below are the known system behaviors and t
 **Built by:** kuya-carlo  — BS Computer Engineering student, Bulacan State University
 
 **Solo submission** — MLH Global Hack Week 2026
+
+## Local finalization note
+
+This isolated copy preserves the MLH Notion MCP submission for review/archive. Verified locally: Ruff lint and format checks pass. Live Notion OAuth, Supabase/Postgres, Vultr inference, and Google/GAFFA extraction require configured secrets and were not exercised in this closeout.
